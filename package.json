@@ -1,0 +1,29 @@
+{
+  "name": "pensarte",
+  "version": "1.0.0",
+  "description": "Project to teaching algorithm thinking",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juanmsl/pensARTE.git"
+  },
+  "author": "Juan Manuel Sánchez - Alejandro Guayara - Pablo Ariza - Leonard Burgos",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/juanmsl/pensARTE/issues"
+  },
+  "homepage": "https://github.com/juanmsl/pensARTE#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-notify": "^3.0.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-todo": "^5.4.0"
+  }
+}
