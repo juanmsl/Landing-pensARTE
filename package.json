@@ -25,5 +25,8 @@
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.1",
     "gulp-todo": "^5.4.0"
+  },
+  "dependencies": {
+    "jquery-scrollify": "^1.0.17"
   }
 }
