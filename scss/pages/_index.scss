@@ -1,15 +1,13 @@
+.topics_title, .idea_title, .members_title {
+	font-size: 4em;
+	text-align: center;
+	margin-bottom: $gutter * 8;
+}
+
 .topics {
-	display: flex;
-	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	padding: $gutter * 8;
-	height: 100vh;
-
-	.topics_title {
-		font-size: 4em;
-		text-align: center;
-	}
 
 	.topics_content {
 		padding: $gutter * 4;
@@ -52,6 +50,10 @@
 		display: block;
 	}
 
+	.topic_description {
+		font-weight: lighter;
+	}
+
 	.topic_user {
 		font-size: 0.8em;
 		text-align: right;
@@ -59,16 +61,42 @@
 }
 
 .idea {
-	height: 100vh;
-	display: flex;
-	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	padding: $gutter * 8 $gutter * 40;
 	height: 100vh;
+}
 
-	.idea_title {
-		font-size: 4em;
+.members {
+	justify-content: center;
+	align-items: center;
+	padding: $gutter * 8 $gutter * 16;
+	height: 100vh;
+
+	.members_content {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.members_member {
+		width: 300px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: $gutter * 2;
+		padding: $gutter;
+	}
+
+	.member_name {
 		text-align: center;
+	}
+
+	.member_photo {
+		width: 160px;
+		height: 160px;
+		display: block;
+		border-radius: 50%;
+		object-fit: cover;
 	}
 }
