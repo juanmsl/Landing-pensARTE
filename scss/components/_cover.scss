@@ -5,16 +5,7 @@
 	background: image("cover.jpg") center center / cover fixed no-repeat;
 
 	.cover_data {
-		background: linear-gradient(
-			rgba($gray-C, 0.9) 45%,
-			$gray-A 45%,
-			$gray-A 65%,
-			rgba($gray-C, 0.9) 65%,
-			rgba($gray-C, 0.9) 70%,
-			$gray-A 70%,
-			$gray-A 75%,
-			rgba($gray-C, 0.9) 75%
-		);
+		background: rgba($gray-C, 0.4);
 		align-items: center;
 		padding: $gutter * 8 $gutter * 16;
 		margin: $gutter * 4;
@@ -25,4 +16,8 @@
 	.cover_title {
 		font-size: 5em;
 	}
+}
+
+.section_body {
+	background: image("background.png") center center / cover fixed no-repeat;
 }
