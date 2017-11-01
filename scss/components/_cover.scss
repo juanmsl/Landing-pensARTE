@@ -20,7 +20,7 @@
 
 .section_body {
 	background: image("background.png") center center / cover fixed no-repeat;
-	height: 100vh;
+	//min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 }
