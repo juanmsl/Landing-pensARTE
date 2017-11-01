@@ -1,8 +1,8 @@
 $.scrollify({
 	section : ".scroll_section",
-	interstitialSection : "",
+	interstitialSection : ".footer",
 	easing: "easeOutExpo",
-	scrollSpeed: 800,
+	scrollSpeed: 600,
 	offset : 0,
 	scrollbars: true,
 	standardScrollElements: "",

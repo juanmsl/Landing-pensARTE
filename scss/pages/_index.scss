@@ -10,16 +10,14 @@
 	padding: $gutter * 8;
 
 	.topics_content {
-		padding: $gutter * 4;
-		display: flex;
-		justify-content: center;
-		flex-wrap: wrap;
+		display: grid;
+		grid-template-columns: repeat(2, 500px);
+		grid-gap: $gutter * 2;
 	}
 
 	.topics_topic {
 		width: 500px;
 		height: 282px;
-		margin: $gutter * 2;
 		overflow: hidden;
 		position: relative;
 		transition: all 0.3s ease;
@@ -71,20 +69,18 @@
 	justify-content: center;
 	align-items: center;
 	padding: $gutter * 8 $gutter * 16;
-	height: 100vh;
 
 	.members_content {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
+		display: grid;
+		grid-template-columns: repeat(4, 250px);
+		grid-gap: $gutter * 2;
 	}
 
 	.members_member {
-		width: 300px;
+		width: 250px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		margin: $gutter * 2;
 		padding: $gutter;
 	}
 
@@ -93,8 +89,8 @@
 	}
 
 	.member_photo {
-		width: 160px;
-		height: 160px;
+		width: 150px;
+		height: 150px;
 		display: block;
 		border-radius: 50%;
 		object-fit: cover;
