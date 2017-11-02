@@ -1,6 +1,7 @@
 extends ../templates/base
 
 append config
+	-bodyClass='index_body'
 
 block footer
 	include ../components/footer
@@ -14,47 +15,83 @@ block main
 	section.scroll_section.topics.section_body
 		h1.topics_title Areas de enfoque
 		section.topics_content
-			section.topics_topic
+			a(href="").topics_topic
 				img(src="resources/images/topic_art.jpg").topic_image
 				section.topic_content
 					h1.topic_title Artes
 					p.topic_description 
 					p.topic_user Cesar Alejandro Guayara Rodriguez
-			section.topics_topic
+			a(href="").topics_topic
 				img(src="resources/images/topic_systems.jpg").topic_image
 				section.topic_content
 					h1.topic_title Ingeniería de sistemas
 					p.topic_description Para introducir al pensamiento algoritmico esta sección se basa en las estructuras de datos y sentencias repetitivas y condicionales
 					p.topic_user Juan Manuel Sánchez Lozano
-			section.topics_topic
+			a(href="").topics_topic
 				img(src="resources/images/topic_industrials.jpg").topic_image
 				section.topic_content
 					h1.topic_title Ingeniería industrial
 					p.topic_description Esta sección se enfoca en los fundamentos del pensamiento algorítmico a travez de la resolución de problemas de optimización
 					p.topic_user Leonard Stuart Burgos Jimenez
-			section.topics_topic
+			a(href="").topics_topic
 				img(src="resources/images/topic_physics.jpg").topic_image
 				section.topic_content
 					h1.topic_title Física
 					p.topic_description 
 					p.topic_user Pablo Andres Ariza Luna
-	section.scroll_section.idea.section_body
-		h1.idea_title Nuestra idea y proposito
-		p.idea_description Sint mentitum eu philosophari, quorum et a elit constias. Te vidisse 
-			|fidelissimae. Aut quorum amet export incurreret et quamquam ita fugiat, ita 
-			|culpa labore si consequat ut voluptate praetermissum ut cupidatat.
+	section.scroll_section.gallery.section_body
+		section.idea
+			h1.idea_title Nuestra idea y proposito
+			h6.idea_description Este proyecto especial del énfasis de computación gráfica estará enfocado a mirar los medios digitales, 
+				|particularmente, la imagen digital, como tema central para generar situaciones de aprendizaje en 
+				|pensamiento algorítmico. El proyecto busca explorar una visión complementaria para contribuir en el 
+				|desarrollo de las capacidades y habilidades de pensamiento algorítmico de aquellos estudiantes que se 
+				|inician en el tema de computación a nivel universitario.
+		.owl-carousel.owl-theme
+			-for(var i = 1; i <= 7; i++)
+				section.item: img(src="resources/images/gallery/" + i + ".jpg")
 	section.scroll_section.members.section_body
 		h1.members_title Miembros del proyecto
 		section.members_content
 			section.members_member
 				img(src="resources/images/profile_alejandro.jpg").member_photo
 				h5.member_name Cesar Alejandro Guayara Rodriguez
+				p.member_data
+					span.icon.icon-envelope
+					|  c_guayara@javeriana.edu.co
+				p.member_data
+					span.icon.icon-envelope-o
+					|  c_guayara@javeriana.edu.co
+				a(href="https://github.com/McDrak" target="_blank").member_data
+					span.icon.icon-github
+					|  McDrak
 			section.members_member
 				img(src="resources/images/profile_juan.jpg").member_photo
 				h5.member_name Juan Manuel Sánchez Lozano
+				p.member_data
+					span.icon.icon-envelope
+					|  jsanchez.l@javeriana.edu.co
+				p.member_data
+					span.icon.icon-envelope-o
+					|  juanmsl_pk@hotmail.com
+				a(href="https://github.com/juanmsl" target="_blank").member_data
+					span.icon.icon-github
+					|  Juanmsl
 			section.members_member
 				img(src="resources/images/profile_leonard.jpg").member_photo
 				h5.member_name Leonard Stuart Burgos Jimenez
+				p.member_data
+					span.icon.icon-envelope
+					|  c_guayara@javeriana.edu.co
+				p.member_data
+					span.icon.icon-envelope-o
+					|  c_guayara@javeriana.edu.co
 			section.members_member
 				img(src="http://via.placeholder.com/200x200").member_photo
 				h5.member_name Pablo Andres Ariza Luna
+				p.member_data
+					span.icon.icon-envelope
+					|  c_guayara@javeriana.edu.co
+				p.member_data
+					span.icon.icon-envelope-o
+					|  c_guayara@javeriana.edu.co

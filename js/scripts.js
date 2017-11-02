@@ -3,15 +3,23 @@ $.scrollify({
 	interstitialSection : ".footer",
 	easing: "easeOutExpo",
 	scrollSpeed: 600,
-	offset : 0,
 	scrollbars: true,
 	standardScrollElements: "",
-	setHeights: false,
-	overflowScroll: true,
-	updateHash: true,
-	touchScroll:true,
-	before:function() {},
-	after:function() {},
-	afterResize:function() {},
-	afterRender:function() {}
+	setHeights: false
 });
+
+$("body").prognroll({
+	height: 5,
+	color: "#0F6C7D",
+	custom: false
+});
+
+$('.owl-carousel').owlCarousel({
+	autoplay:true,
+	loop:true,
+	margin:30,
+	items:3,
+	center:true,
+	dots:true,
+	stagePadding:100
+})

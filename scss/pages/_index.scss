@@ -1,3 +1,7 @@
+.index_body {
+	background: image("background.png") center center / cover fixed no-repeat;
+}
+
 .topics_title, .idea_title, .members_title {
 	font-size: 4em;
 	text-align: center;
@@ -16,11 +20,14 @@
 	}
 
 	.topics_topic {
+		user-select: none;
+		display: block;
 		width: 500px;
 		height: 282px;
 		overflow: hidden;
 		position: relative;
 		transition: all 0.3s ease;
+		cursor: pointer;
 
 		&:hover {
 			transform: scale(1.1);
@@ -58,11 +65,18 @@
 	}
 }
 
+.gallery {
+	background: linear-gradient(rgba($blue-2, 0.5), rgba($blue-5, 0.7), rgba($blue-2, 0.5));
+}
+
 .idea {
 	justify-content: center;
 	align-items: center;
 	padding: $gutter * 8 $gutter * 40;
-	height: 100vh;
+
+	.idea_description {
+		text-align: center;
+	}
 }
 
 .members {
@@ -72,12 +86,11 @@
 
 	.members_content {
 		display: grid;
-		grid-template-columns: repeat(4, 250px);
+		grid-template-columns: repeat(4, 400px);
 		grid-gap: $gutter * 2;
 	}
 
 	.members_member {
-		width: 250px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -86,6 +99,10 @@
 
 	.member_name {
 		text-align: center;
+	}
+
+	.member_data {
+		margin: $gutter / 2;
 	}
 
 	.member_photo {

@@ -1,6 +1,29 @@
 footer.footer
-	.copyright= name + ' | Copyright © ' + year + ' - Todos los derechos reservados a sus respectivos dueños'
-	.github-link
-		a(href='')
-			span.icon.icon-github
-			|  View Source
+	section.footer_content
+		section.footer_section.footer_subcontent.footer_vertical_center
+			section
+				img(src="resources/images/javeriana_logo.png").footer_logo
+			section
+				p Pontificia Universidad Javeriana
+				p Bogotá D.C - Colombia
+				p Carrera 7 No. 40 - 62
+				p (57 1) 3208320
+		section.footer_section
+			h6.footer_section_title Miembros del grupo
+			ul.footer_members
+				li.footer_member Cesar Alejandro Guayara Rodriguez
+				li.footer_member Juan Manuel Sánchez Lozano
+				li.footer_member Leonard Stuart Burgos Jimenez
+				li.footer_member Pablo Andres Ariza Luna
+		section.footer_section
+			h6.footer_section_title Profesores asociados
+			ul.footer_members
+				li.footer_member Luis Carlos Diaz Chaparro
+				li.footer_member Leonardo Florez Valencia
+				li.footer_member Jose Hernando Hurtado Rojas
+	section.copyright_section
+		.copyright= name + ' | Copyright © ' + year + ' - Todos los derechos reservados a sus respectivos dueños'
+		.github-link
+			a(href='https://github.com/juanmsl/pensARTE' target='_blank')
+				span.icon.icon-github
+				|  View Source
