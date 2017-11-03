@@ -3,7 +3,8 @@
 	display: flex;
 	flex-direction: column;
 	margin: $gutter $gutter;
-	box-shadow: 0 0 10px;
+	background: $gray-E;
+	padding: $gutter;
 
 	@include from(laptop) {
 		width: 80vw;

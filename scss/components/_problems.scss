@@ -1,0 +1,45 @@
+.problems {
+	.problems_content {
+		display: grid;
+		grid-gap: $gutter * 4;
+		grid-template-columns: repeat(1, 1fr);
+
+		@include from(tablet) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include from(pc) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+
+	.problems_problem {
+		width: 100%;
+		height: 0;
+		padding-bottom: 57%;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.problem_image {
+		display: block;
+		width: 100%;
+	}
+
+	.problem_data {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: flex-end;
+		align-items: flex-end;
+		background: linear-gradient(rgba($gray-3, 0.2), rgba($gray-1, 0.8));
+	}
+
+	.problem_title {
+		padding: $gutter * 2;
+		color: $gray-E;
+	}
+}
