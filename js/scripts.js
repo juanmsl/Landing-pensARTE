@@ -5,7 +5,8 @@ $.scrollify({
 	scrollSpeed: 600,
 	scrollbars: true,
 	standardScrollElements: "",
-	setHeights: false
+	setHeights: false,
+	touchScroll:false
 });
 
 $("body").prognroll({
@@ -36,3 +37,23 @@ $('.owl-carousel').owlCarousel({
 		}
 	}
 })
+
+$('.btn-trigger').on('click', function(){
+	$(this).toggleClass('close');
+	$('#main-menu').toggleClass('descenso');
+	$('#main-menu').toggleClass('hidden');
+});
+
+$('#main-menu a').on('click', function(){
+	$('.btn-trigger').toggleClass('close');
+	$('#main-menu').toggleClass('descenso');
+	$('#main-menu').toggleClass('hidden');
+});
+
+$(document).on('click', function(event) {
+	if(!$(event.target).is('.btn-trigger') && !$(event.target).is('#main-menu a')) {
+		$('#main-menu').addClass('hidden');
+		$('.btn-trigger').removeClass('close');
+		$('#main-menu').removeClass('descenso');
+	}
+});

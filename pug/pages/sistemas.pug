@@ -1,0 +1,21 @@
+extends ../templates/base
+
+append config
+	-bodyClass='index_body'
+
+block nav
+	include ../components/navbar
+
+block footer
+	include ../components/footer
+
+block header
+	header.header.scroll_section
+		img(src="resources/images/topic_systems.jpg").cover_section_image
+		section.header_data
+			h1.header_title Ingeniería de sistemas
+			h6 Esta sección se basa en las estructuras de datos y sentencias repetitivas y condicionales
+		
+
+block maincontent
+	

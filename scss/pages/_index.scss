@@ -2,17 +2,6 @@
 	background: image("background.png") center center / cover fixed no-repeat;
 }
 
-.topics_title, .idea_title, .members_title {
-	font-size: 3em;
-	text-align: center;
-	margin-bottom: $gutter * 4;
-
-	@include from(tablet) {
-		font-size: 4em;
-		margin-bottom: $gutter * 8;
-	}
-}
-
 .topics {
 
 	.topics_content {
@@ -67,6 +56,7 @@
 	.topic_image {
 		width: 100%;
 		display: block;
+		object-fit: cover;
 	}
 
 	.topic_description {

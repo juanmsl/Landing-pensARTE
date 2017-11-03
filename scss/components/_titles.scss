@@ -1,0 +1,10 @@
+.topics_title, .idea_title, .members_title {
+	font-size: 3em;
+	text-align: center;
+	margin-bottom: $gutter * 4;
+
+	@include from(tablet) {
+		font-size: 4em;
+		margin-bottom: $gutter * 8;
+	}
+}
