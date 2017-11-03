@@ -18,8 +18,21 @@ $('.owl-carousel').owlCarousel({
 	autoplay:true,
 	loop:true,
 	margin:30,
-	items:3,
 	center:true,
 	dots:true,
-	stagePadding:100
+	stagePadding: 100,
+	responsive:{
+		0:{
+			items:1
+		},
+		640:{
+			items:1
+		},
+		768:{
+			items:2
+		},
+		1024:{
+			items:3
+		}
+	}
 })

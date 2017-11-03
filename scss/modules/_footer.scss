@@ -7,6 +7,11 @@
 
 	.footer_section {
 		margin: 0 $gutter * 3;
+		text-align: center;
+
+		@include from(laptop) {
+			text-align: left;
+		}
 	}
 
 	.footer_section_title {
@@ -23,15 +28,25 @@
 	}
 
 	.footer_content {
-		width: 1600px;
-		padding: $gutter / 2 $gutter * 10;
+		padding: $gutter / 2 $gutter;
 		margin: 0 auto;
 		display: flex;
+		flex-direction: column;
 		justify-content: center;
+		align-items: center;
+
+		@include from(laptop) {
+			flex-direction: row;
+		}
 	}
 
 	.footer_subcontent {
 		display: flex;
+		flex-direction: column;
+
+		@include from(laptop) {
+			flex-direction: row;
+		}
 	}
 
 	.footer_members {
