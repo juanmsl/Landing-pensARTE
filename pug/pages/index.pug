@@ -2,6 +2,7 @@ extends ../templates/base
 
 append config
 	-bodyClass='index_body'
+	-scrollPage=true
 
 block nav
 	include ../components/navbar
@@ -17,25 +18,25 @@ block main
 	section#topics.scroll_section.topics.section_body
 		h1.topics_title Areas de enfoque
 		section.topics_content
-			a(href="").topics_topic
+			a(href="artes.html").topics_topic
 				img(src="resources/images/topic_art.jpg").topic_image
 				section.topic_content
 					h3.topic_title Artes
 					p.topic_description Esta sección introduce y se enfatiza en el arte computaciónal, sus conceptos y ramas de desarrollo profesional e investigativo
 					p.topic_user Cesar Alejandro Guayara Rodriguez
-			a(href="").topics_topic
+			a(href="sistemas.html").topics_topic
 				img(src="resources/images/topic_systems.jpg").topic_image
 				section.topic_content
 					h3.topic_title Ingeniería de sistemas
 					p.topic_description Esta sección se basa en las estructuras de datos y sentencias repetitivas y condicionales
 					p.topic_user Juan Manuel Sánchez Lozano
-			a(href="").topics_topic
+			a(href="industrial.html").topics_topic
 				img(src="resources/images/topic_industrials.jpg").topic_image
 				section.topic_content
 					h3.topic_title Ingeniería industrial
 					p.topic_description Esta sección se enfoca en los fundamentos del pensamiento algorítmico a travez de la resolución de problemas de optimización
 					p.topic_user Leonard Stuart Burgos Jimenez
-			a(href="").topics_topic
+			a(href="fisica.html").topics_topic
 				img(src="resources/images/topic_physics.jpg").topic_image
 				section.topic_content
 					h3.topic_title Física

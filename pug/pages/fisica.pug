@@ -1,0 +1,41 @@
+extends ../templates/base
+
+append config
+	-bodyClass='index_body'
+
+block nav
+	include ../components/navbar
+
+block footer
+	include ../components/footer
+
+block header
+	header.header.scroll_section
+		img(src="resources/images/topic_physics.jpg").header_image
+		section.header_data
+			h1.header_title Física
+			h6 Esta seccion muestra como el pensamiento algoritmico puede ser aplicado en muchos temas tomando a la fisica como herramienta
+		
+
+block maincontent
+	section.problems.scroll_section
+		section.problem
+			section.problem_header
+				h1.problem_title Buscaminas
+			section.problem_body
+				p.problem_description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tempor ex eu orci ultricies, eget luctus eros ornare. Curabitur ultrices, nisl ac sodales luctus, ligula est faucibus justo, sed pellentesque nibh sem at nunc. Mauris diam sapien, fringilla vitae elit a, suscipit dignissim felis. Vestibulum ante ipsum primis in faucibus.
+				section.problem_section
+					section.problem_column
+						p.problem_objective Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lacus velit, malesuada ut malesuada in, placerat at ante. Cras non eros mattis, mollis mi id.
+						ul.problem_topics
+							li.problem_topic Topic 1
+							li.problem_topic Topic 1
+							li.problem_topic Topic 1
+							li.problem_topic Topic 1
+						a(href="resources/processing/Prueba/Prueba.pde") Descargar ejercicio
+						a(href="resources/processing/Prueba/Prueba.pde") Descargar enunciado completo
+						canvas(data-processing-sources="resources/processing/Prueba/Prueba.pde" width="100")#prb.problem_canvas
+					section.problem_column
+						p.problem_solution Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lacus velit, malesuada ut malesuada in, placerat at ante. Cras non eros mattis, mollis mi id.
+						a(href="resources/processing/Prueba/Prueba.pde") Descargar solución
+						canvas(data-processing-sources="resources/processing/Prueba/Prueba.pde" width="100").problem_canvas

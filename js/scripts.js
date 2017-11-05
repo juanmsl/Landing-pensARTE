@@ -1,13 +1,15 @@
-$.scrollify({
-	section : ".scroll_section",
-	interstitialSection : ".footer",
-	easing: "easeOutExpo",
-	scrollSpeed: 600,
-	scrollbars: true,
-	standardScrollElements: "",
-	setHeights: false,
-	touchScroll:false
-});
+if(scrollPage) {
+	$.scrollify({
+		section : ".scroll_section",
+		interstitialSection : ".footer",
+		easing: "easeOutExpo",
+		scrollSpeed: 600,
+		scrollbars: true,
+		standardScrollElements: "",
+		setHeights: false,
+		touchScroll:false
+	});
+}
 
 $("body").prognroll({
 	height: 5,
@@ -55,5 +57,14 @@ $(document).on('click', function(event) {
 		$('#main-menu').addClass('hidden');
 		$('.btn-trigger').removeClass('close');
 		$('#main-menu').removeClass('descenso');
+	}
+});
+
+$('.problem_header').on('click', function() {
+	var body = $(this).next('.problem_body');
+	var isHidden = body.is(':hidden');
+	$('.problem_header').next('.problem_body').slideUp();
+	if(isHidden) {
+		body.slideDown();
 	}
 });

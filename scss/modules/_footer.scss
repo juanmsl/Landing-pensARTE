@@ -23,10 +23,6 @@
 		margin: $gutter;
 	}
 
-	.footer_vertical_center {
-		align-items: center;
-	}
-
 	.footer_content {
 		padding: $gutter / 2 $gutter;
 		margin: 0 auto;
@@ -37,12 +33,14 @@
 
 		@include from(laptop) {
 			flex-direction: row;
+			align-items: flex-start;
 		}
 	}
 
 	.footer_subcontent {
 		display: flex;
 		flex-direction: column;
+		align-items: center;
 
 		@include from(laptop) {
 			flex-direction: row;
