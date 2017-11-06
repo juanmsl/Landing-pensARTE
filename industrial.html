@@ -31,24 +31,33 @@
 			<section class="problems scroll_section">
 				<section class="problem">
 					<section class="problem_header">
-						<h1 class="problem_title">Buscaminas</h1>
+						<h1 class="problem_title">Escala de grises</h1>
 					</section>
 					<section class="problem_body">
-						<p class="problem_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tempor ex eu orci ultricies, eget luctus eros ornare. Curabitur ultrices, nisl ac sodales luctus, ligula est faucibus justo, sed pellentesque nibh sem at nunc. Mauris diam sapien, fringilla vitae elit a, suscipit dignissim felis. Vestibulum ante ipsum primis in faucibus.</p>
+						<p class="problem_description">El procesamiento de imágenes digitales es una herramienta de gran utilidad para la identificación y eliminación de datos irrelevantes, facilitando la detección de píxeles que poseen información de interés. Por otra parte, el tratamiento de imágenes involucra la aplicación de diversas técnicas dentro de las cuales se encuentran el uso de filtros, cuyo objetivo es el de alterar el color de cada uno de los píxeles que conforman la imagen. Uno de los filtros más reconocidos es la escala de grises, el cual se evidencia en el siguiente ejemplo</p><img src="resources/images/extra/escala_aves.png">
+						<p class="problem_description">Una de las metodologías para aplicar el filtro en cuestión es tomar la imagen píxel por píxel e identificar aquel color perteneciente a la escala de grises que se encuentre más cerca al color del píxel analizado. Un buen indicador de la cercanía o similitud de dos colores es el cálculo de la distancia euclidiana entre los dos, tal y como se ve en la siguiente ecuación:</p><img src="http://latex.codecogs.com/svg.latex?d_{(p1, p2)}=\sqrt{(x_{2}-x_{1})^{2}+(y_{2}-y_{1})^{2}+(z_{2}-z_{1})^{2}}">
+						<ul class="problem_topics">
+							<li class="problem_topic">Creatividad</li>
+							<li class="problem_topic">Operadores aritméticos y lógicos</li>
+							<li class="problem_topic">Sentencias condicionales</li>
+							<li class="problem_topic">Sentencias repetitivas</li>
+						</ul>
 						<section class="problem_section">
 							<section class="problem_column">
-								<p class="problem_objective">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lacus velit, malesuada ut malesuada in, placerat at ante. Cras non eros mattis, mollis mi id.</p>
-								<ul class="problem_topics">
-									<li class="problem_topic">Topic 1</li>
-									<li class="problem_topic">Topic 1</li>
-									<li class="problem_topic">Topic 1</li>
-									<li class="problem_topic">Topic 1</li>
-								</ul><a href="resources/processing/Prueba/Prueba.pde">Descargar ejercicio</a><a href="resources/processing/Prueba/Prueba.pde">Descargar enunciado completo</a>
-								<canvas class="problem_canvas" data-processing-sources="resources/processing/Prueba/Prueba.pde" width="100" id="prb"></canvas>
+								<p class="problem_objective">En este taller, dada una imagen, el estudiante se encargará de construir un programa en Processing que se encargará de identificar aquella transformación a escala de grises que garantice minimizar la distancia euclidiana total, esto es, la suma de las distancias euclidianas entre cada uno de los píxeles y el color que recibió en la conversión. Para ello se contará con tres colores pertenecientes a la escala de grises: negro (0,0,0); gris (123,123,123) y blanco (255,255,255).</p>
+								<ul class="problem_tips">
+									<li class="problem_tip">Los píxeles se conforman por tres tipos de colores: rojo, verde y azul, cada uno con intensidades que van desde 0 hasta 255</li>
+									<li class="problem_tip">Image -> Tipo de dato que representa una imagen en el programa</li>
+									<li class="problem_tip">loadImage(nombre_imagen) -> Función que sirve para cargar una imagen en Processing</li>
+									<li class="problem_tip">loadPixels() -> Se encarga de cargar los píxeles de la imagen</li>
+									<li class="problem_tip">Los píxeles en Processing se manejan como un vector</li>
+									<li class="problem_tip">Red(imagen.pixels[i]) -> Retorna el valor del canal rojo del píxel i</li>
+									<li class="problem_tip">Green(imagen.pixels[i]) -> Retorna el valor del canal verde del píxel i</li>
+									<li class="problem_tip">Blue(imagen.pixels[i]) -> Retorna el valor del canal azul del píxel i</li>
+								</ul><a href="resources/docs/Escala de grises.pdf" target="_blank"><span class="icon icon-download"></span> Descargar enunciado completo</a>
 							</section>
 							<section class="problem_column">
-								<p class="problem_solution">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lacus velit, malesuada ut malesuada in, placerat at ante. Cras non eros mattis, mollis mi id.</p><a href="resources/processing/Prueba/Prueba.pde">Descargar solución</a>
-								<canvas class="problem_canvas" data-processing-sources="resources/processing/Prueba/Prueba.pde" width="100"></canvas>
+								<p class="problem_solution">El estudiante debe plantear la imagen a procesar como una matriz de pixeles en la que cada posición contiene el color en los tres canales (R, G, B). Posteriormente debe calcular la distancia euclidiana entre el pixel en cuestión y cada uno de los colores en la escala de grises por los cuales se puede sustituir (Blanco, gris y negro). Aquel color que se encuentre más cerca del pixel en cuestión será el que se asignará a este. Este proceso se lleva a cabo hasta cubrir todos los píxeles de la imagen.</p><a href="resources/piezas/Escala de grises.zip"><span class="icon icon-download"></span> Descargar solución</a>
 							</section>
 						</section>
 					</section>

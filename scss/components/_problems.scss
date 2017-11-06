@@ -11,7 +11,7 @@
 
 	.problem_title {
 		margin: 0;
-		padding: $gutter;
+		padding: $gutter * 2;
 		transition: all 0.3s ease;
 
 		&:hover {
@@ -21,10 +21,19 @@
 
 	.problem_body {
 		//display: none;
+		text-align: justify;
+		display: flex;
+		flex-direction: column;
+
+		img {
+			align-self: center;
+			max-width: 100%;
+			margin: $gutter 0;
+		}
 	}
 
 	.problem_description {
-		&::before {
+		&:first-child::before {
 			content: 'Descripción';
 			display: block;
 			font-size: $h4;
@@ -36,15 +45,15 @@
 	.problem_section {
 		display: grid;
 		grid-template-columns: repeat(1, 1fr);
-		grid-gap: $gutter;
 
 		@include from(laptop) {
 			grid-template-columns: repeat(2, 1fr);
+			grid-gap: $gutter * 4;
 		}
 	}
 
 	.problem_objective {
-		&::before {
+		&:first-child::before {
 			content: 'Objetivo';
 			display: block;
 			font-size: $h4;
@@ -54,7 +63,7 @@
 	}
 
 	.problem_solution {
-		&::before {
+		&:first-child::before {
 			content: 'Solución';
 			display: block;
 			font-size: $h4;
@@ -67,17 +76,23 @@
 		list-style: none;
 		padding: 0;
 		display: flex;
+		justify-content: center;
 		flex-wrap: wrap;
-		margin: 0;
+		margin: $gutter * 2 0;
 	}
 
 	.problem_topic {
-		color: $gray-D;
-		background: $gray-3;
+		color: $gray-1;
+		background: $gray-A;
 		padding: $gutter / 2 $gutter;
 		font-size: 0.8em;
 		margin: $gutter / 2;
 		border-radius: 50px;
+		font-weight: bold;
+
+		&:first-child {
+			margin-left: 0;
+		}
 	}
 
 	.problem_column {

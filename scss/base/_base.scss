@@ -63,6 +63,10 @@ p {
 	margin: $gutter 0;
 }
 
+p, li, a {
+	line-height: 1.3rem;
+}
+
 a {
 	text-decoration: none;
 	color: inherit;

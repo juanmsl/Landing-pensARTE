@@ -4,7 +4,7 @@
 	flex-direction: column;
 	margin: $gutter $gutter;
 	background: $gray-E;
-	padding: $gutter;
+	padding: $gutter * 3;
 
 	@include from(laptop) {
 		width: 80vw;
