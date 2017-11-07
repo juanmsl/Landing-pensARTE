@@ -5,15 +5,13 @@ var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
 var todo = require('gulp-todo');
-var notify = require("gulp-notify");
 var config = require('./gulpfile_config.json');
 
 gulp.task('pug', () => {
 	gulp.src(config.pug.src)
 	.pipe(pug(config.pug.plugin))
 	.pipe(rename(config.pug.rename))
-	.pipe(gulp.dest(config.pug.dest))
-	.pipe(notify("PUG: <%= file.relative %>!"));
+	.pipe(gulp.dest(config.pug.dest));
 });
 
 gulp.task('styles', () => {
@@ -21,7 +19,6 @@ gulp.task('styles', () => {
 	.pipe(sourcemaps.init())
 		.pipe(sass(config.sass.plugin).on('error', sass.logError))
 		.pipe(autoprefixer(config.sass.autoprefixer))
-		.pipe(notify("SASS: <%= file.relative %>"))
 	.pipe(sourcemaps.write(''))
 	.pipe(gulp.dest(config.sass.dest));
 });
