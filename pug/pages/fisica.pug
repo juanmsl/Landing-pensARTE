@@ -21,21 +21,70 @@ block maincontent
 	section.problems.scroll_section
 		section.problem
 			section.problem_header
-				h1.problem_title Buscaminas
+				h1.problem_title Creando un mundo con cuerpos
 			section.problem_body
-				p.problem_description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tempor ex eu orci ultricies, eget luctus eros ornare. Curabitur ultrices, nisl ac sodales luctus, ligula est faucibus justo, sed pellentesque nibh sem at nunc. Mauris diam sapien, fringilla vitae elit a, suscipit dignissim felis. Vestibulum ante ipsum primis in faucibus.
+				p.problem_description En la realidad estamos regidos por leyes física que las dictan nuestro “mundo”, con la librería Física debemos crear el “mundo” para poder usarla. Como el mundo es creado por nosotros podemos decidir la magnitud y dirección de fuerzas que lo rigen. Por ejemplo, podemos definir a donde se dirige la fuerza de la gravedad y la magnitud de esta.
+				ul.problem_topics
+					li.problem_topic Abstraer
+					li.problem_topic Declaración de variables
+					li.problem_topic Crear un mundo con física
+					li.problem_topic Conceptos basicos sobre vectores
 				section.problem_section
 					section.problem_column
-						p.problem_objective Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lacus velit, malesuada ut malesuada in, placerat at ante. Cras non eros mattis, mollis mi id.
-						ul.problem_topics
-							li.problem_topic Topic 1
-							li.problem_topic Topic 1
-							li.problem_topic Topic 1
-							li.problem_topic Topic 1
-						a(href="resources/processing/Prueba/Prueba.pde") Descargar ejercicio
-						a(href="resources/processing/Prueba/Prueba.pde") Descargar enunciado completo
-						canvas(data-processing-sources="resources/processing/Prueba/Prueba.pde" width="100")#prb.problem_canvas
+						p.problem_objective Como primer ejercicio se planea tener 4 cuerpos que sean 2 redondos y 2 cuadrados, que el mundo tenga bordes en los límites de la pantalla y por medio de la gravedad se desplacen hacia la parte de arriba. A continuación, se mostrará una imagen de referencia en un instante de tiempo con los 4 cuerpo y 0 de gravedad.
+						p.problem_objective Las fuerzas y velocidad son vectores por ende tiene una dirección y una magnitud. Entonces si se tiene una velocidad que es V = <10, 30>m/s eso significa que un cuerpo con esa velocidad recorre 10m en 1s en la dirección X y 30m en 1s en la dirección Y. Por ejemplo, si un cuerpo está en la posición <0, 0> y tiene la velocidad antes mencionada, en 1 segundo pasaría a la posición <10, 30>.
+							| Para instalar la librería Física en processing se dirigen a la pestaña Sketch → Import library → Add library y buscan Física.
+							| Para saber cosas básicas de la librería Física los siguientes enlaces
+						a(href="http://mycours.es/fisica/")
+							span.icon.icon-info
+							|  Mycours.es
+						a(href="http://www.ricardmarxer.com/fisica/reference/index.html")
+							span.icon.icon-info
+							|  RicardMarxer.com
+
+						a(href="resources/piezas/Creacion de mundos ejercicio.zip")
+							span.icon.icon-download
+							|  Descargar ejercicio
+						a(href="resources/docs/Creacion de un mundo.pdf" target="_blank")
+							span.icon.icon-download
+							|  Descargar enunciado completo
 					section.problem_column
-						p.problem_solution Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lacus velit, malesuada ut malesuada in, placerat at ante. Cras non eros mattis, mollis mi id.
-						a(href="resources/processing/Prueba/Prueba.pde") Descargar solución
-						canvas(data-processing-sources="resources/processing/Prueba/Prueba.pde" width="100").problem_canvas
+						p.problem_solution Con el código dado el estudiante primero debe de agregar una caja más y con el link de mycours averiguar cómo se crean círculos con la librería. Segundo modificar la función setEdge para que los bordes estén en los límites de la pantalla. Finalmente modificar setGravity para que la gravedad lleve los cuerpos a la parte superior de la pantalla.
+						a(href="resources/piezas/Creacion de mundos solucion.zip")
+							span.icon.icon-download
+							|  Descargar solución
+		section.problem
+			section.problem_header
+				h1.problem_title Moviendo los cuerpos
+			section.problem_body
+				p.problem_description Muchas actividades que se llevan a cabo en la realidad son repetitivas, la programación trata de abstraer lo más que puede la realidad. Entonces los ciclos son sentencias repetitivas, esto permite abstraer de una forma más “realista” el mundo. Por ejemplo, si tenemos un cuerpo que está acelerando, esta aceleración se puede interpretar como un ciclo.
+				ul.problem_topics
+					li.problem_topic Ciclo implicito de draw
+					li.problem_topic Manejo de funciones de la libreria 'Física'
+				section.problem_section
+					section.problem_column
+						p.problem_objective Este ejercicio tiene como finalidad que 3 particalas se mueva de forma vertical y que se creen en el lado izquierdo de la pantalla. Una con velocidad constante, una con aceleracion constante y la ultima con aceleracion variable.
+						p.problem_objective Las fuerzas y velocidad son vectores por ende tiene una dirección y una magnitud. Entonces si se tiene una velocidad que es V = <10, 30>m/s eso significa que un cuerpo con esa velocidad recorre 10m en 1s en la dirección X y 30m en 1s en la dirección Y. Por ejemplo, si un cuerpo está en la posición <0, 0> y tiene la velocidad antes mencionada, en 1 segundo pasaría a la posición <10, 30>.
+						p.problem_objective En processing y normalmente existen 3 formas de realizar un ciclo, las dos más “esenciales” son con el while(){} y con el for(){}. La diferencia entre estos dos son que el while solo necesita 1 “parámetro” que es una condición lógica, es decir algo que es verdadero o falso, y el for tiene 3 “parámetros”, el primero es la variable que hará de contado, el segundo hasta que numero llegara el contado, el ultimo cuanto crece o decrece la variable y cada uno entre estos se dividen con ;. Por ejemplo:
+						p.problem_objective int i = 0; i < 10; i++
+						p.problem_objective Pero en processing la función draw ya tiene un ciclo implícito, esto hace que todo lo que escribamos en la función draw se hará indefinidamente hasta que el programa termine de ejecutarse.
+						p.problem_objective Para modificar la velocidad de un cuerpo debe ser a través de cuerpo.setVelocity(i, j). Y para extraer la velocidad actual del cuerpo es cuerpo.getVelocityX() y  cuerpo.getVelocityY()
+						p.problem_objective Para saber cosas básicas de la librería Fisica los siguientes enlaces sirven
+						a(href="http://mycours.es/fisica/")
+							span.icon.icon-info
+							|  Mycours.es
+						a(href="http://www.ricardmarxer.com/fisica/reference/index.html")
+							span.icon.icon-info
+							|  RicardMarxer.com
+		
+						a(href="resources/piezas/Moviendo el mundo ejercicio.zip")
+							span.icon.icon-download
+							|  Descargar ejercicio
+						a(href="resources/docs/Moviendo el mundo.pdf" target="_blank")
+							span.icon.icon-download
+							|  Descargar enunciado completo
+					section.problem_column
+						p.problem_solution Con el código dado el estudiante debe de agregar dos circulo más y crear otra variable que represente la aceleración variable. Después usar un ciclo que aumente las variables de la aceleración y que modifique la velocidad de los cuerpos.
+						a(href="resources/piezas/Moviendo el mundo solucion.zip")
+							span.icon.icon-download
+							|  Descargar solución
