@@ -19,4 +19,84 @@ block header
 
 block maincontent
 	section.problems.scroll_section
-		
+		section.problem
+			section.problem_header
+				h1.problem_title Introducción a las figuras básicas
+			section.problem_body
+				p.problem_description Las figuras geométricas están contenidas a donde sea que volteemos a mirar. Por esta razon es importante primero aprender cómo usarlas e interactuar con ellas antes de realizar procedimientos más avanzados.
+				ul.problem_topics
+					li.problem_topic Operadores Aritméticos
+					li.problem_topic Funciones básicas de Processing
+					li.problem_topic Sentencias Condicionales
+				section.problem_section
+					section.problem_column
+						p.problem_objective Se quiere a partir de las funciones básicas de Processing generar figuras aleatorias en posiciones aleatorias a través del lienzo. Adicionalmente el color de relleno de cada figura también será aleatorio.
+						a(href="resources/docs/#.pdf" target="_blank")
+							span.icon.icon-download
+							|  Descargar enunciado completo
+					section.problem_column
+						p.problem_solution A partir de un proyecto nuevo el estudiante debe generar y guardar un numero aleatorio y a partir del mismo se presentarán una serie de casos posibles, dentro de los cuales estará la creación de cada figura básica utilizada en la herramienta.
+						a(href="resources/piezas/#.zip")
+							span.icon.icon-download
+							|  Descargar solución
+		section.problem
+			section.problem_header
+				h1.problem_title Introducción a la animación - parte 1
+			section.problem_body
+				p.problem_description Animación es el proceso de dar la sensación de movimiento a figuras o imágenes.
+				ul.problem_topics
+					li.problem_topic Operadores Aritméticos
+					li.problem_topic Ciclos y Ciclo Implícito de la función Draw
+					li.problem_topic Sentencias Condicionales
+				section.problem_section
+					section.problem_column
+						p.problem_objective Se quiere a partir del ciclo implícito de la función Draw de Processing procesar el movimiento de una figura de elección, cabe aclarar que esta figura debe “rebotar” contra las paredes del lienzo. Adicionalmente, el color de dicha figura deberá cambiar a medida que se va moviendo la figura.
+						a(href="resources/docs/#.pdf" target="_blank")
+							span.icon.icon-download
+							|  Descargar enunciado completo
+					section.problem_column
+						p.problem_solution En primer lugar, se debe hacer uso de la función Setup para la creación y posicionamiento inicial de la figura. En segundo lugar, a partir del ciclo implícito que contiene la función Draw, aumentar o restar los valore de posiciones de las coordenadas de la figura. Para el “rebote”, se debe revisar si el las coordenadas de la figura se encuentran encima o mas allá de los límites del lienzo.
+						a(href="resources/piezas/#.zip")
+							span.icon.icon-download
+							|  Descargar solución
+		section.problem
+			section.problem_header
+				h1.problem_title Introducción a la animación - parte 2
+			section.problem_body
+				p.problem_description Teniendo en cuenta la sección de Introducción a la Animación, en algunos campos de aplicación de la Animación, como lo son los videojuegos, se requiere que los usuarios tengan una interacción con la animación de alguna forma. En este caso, una figura deseada tendrá que realizar los movimientos a partir de la interacción con el teclado.
+				ul.problem_topics
+					li.problem_topic Sentencias Condicionales
+					li.problem_topic Creación de funciones.
+					li.problem_topic Interpretación del teclado.
+					li.problem_topic Ciclos y Ciclo implícito de la función Draw.
+
+				section.problem_section
+					section.problem_column
+						p.problem_objective Se quiere que sea posible leer la respuesta del usuario a partir del teclado y a partir de ello mover una figura escogida por el mismo.
+						a(href="resources/docs/#.pdf" target="_blank")
+							span.icon.icon-download
+							|  Descargar enunciado completo
+					section.problem_column
+						p.problem_solution En primer lugar, se debe definir y posicionar la figura deseada. En segundo lugar, se debe crear la función que recibirá la respuesta del teclado. Finalmente, decidir cómo se moverá la figura dependiendo de la tecla y aplicarlo.
+						a(href="resources/piezas/#.zip")
+							span.icon.icon-download
+							|  Descargar solución
+		section.problem
+			section.problem_header
+				h1.problem_title Filtrado de imagenes
+			section.problem_body
+				p.problem_description El filtrado es una técnica para realizar mejoras o modificaciones hacia una imagen. Esta técnica puede realizarse a partir de los mismos pixeles o a partir de vecindarios. Por fortuna, la herramienta Processing cuenta con una función específica que aplica un filtro de una gran variedad a una imagen seleccionada.
+				ul.problem_topics
+					li.problem_topic Uso de funciones
+					li.problem_topic Carga y uso de archivos
+				section.problem_section
+					section.problem_column
+						p.problem_objective Se quiere que a partir de las funciones propias de modificación de imágenes que tiene integradas la herramienta Processing se apliquen uno o varios filtros a cierta imagen escogida por el usuario. Adicionalmente, cada imagen de resultado de estos filtros deberá ser mostrado al costado lateral y/o inferior de la imagen original.
+						a(href="resources/docs/#.pdf" target="_blank")
+							span.icon.icon-download
+							|  Descargar enunciado completo
+					section.problem_column
+						p.problem_solution En primer lugar, se debe realizar la carga de la imagen seleccionada. En segundo lugar, a partir del número deseado de filtros que se quieran aplicar se debe modificar el tamaño del lienzo. Finalmente, se debe posicionar cada imagen cada vez que se aplique un filtro.
+						a(href="resources/piezas/#.zip")
+							span.icon.icon-download
+							|  Descargar solución
