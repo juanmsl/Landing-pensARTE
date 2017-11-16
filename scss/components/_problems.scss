@@ -38,7 +38,7 @@
 
 	.problem_description {
 		&:first-child::before {
-			content: 'Descripción';
+			content: 'Enunciado';
 			display: block;
 			font-size: $h4;
 			font-weight: bold;

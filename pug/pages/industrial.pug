@@ -26,6 +26,17 @@ block maincontent
 				img(src="resources/images/extra/escala_aves.png")
 				p.problem_description Una de las metodologías para aplicar el filtro en cuestión es tomar la imagen píxel por píxel e identificar aquel color perteneciente a la escala de grises que se encuentre más cerca al color del píxel analizado. Un buen indicador de la cercanía o similitud de dos colores es el cálculo de la distancia euclidiana entre los dos, tal y como se ve en la siguiente ecuación:
 				img(src="http://latex.codecogs.com/svg.latex?d_{(p1, p2)}=\\sqrt{(x_{2}-x_{1})^{2}+(y_{2}-y_{1})^{2}+(z_{2}-z_{1})^{2}}")
+				p.problem_description En este taller, dada una imagen, el estudiante se encargará de construir un programa en Processing que se encargará de identificar aquella transformación a escala de grises que garantice minimizar la distancia euclidiana total, esto es, la suma de las distancias euclidianas entre cada uno de los píxeles y el color que recibió en la conversión. Para ello se contará con tres colores pertenecientes a la escala de grises: negro (0,0,0); gris (123,123,123) y blanco (255,255,255).
+				ul.problem_tips
+					li.problem_tip Los píxeles se conforman por tres tipos de colores: rojo, verde y azul, cada uno con intensidades que van desde 0 hasta 255
+					li.problem_tip Image -> Tipo de dato que representa una imagen en el programa
+					li.problem_tip loadImage(nombre_imagen) -> Función que sirve para cargar una imagen en Processing
+					li.problem_tip loadPixels() -> Se encarga de cargar los píxeles de la imagen
+					li.problem_tip Los píxeles en Processing se manejan como un vector
+					li.problem_tip Red(imagen.pixels[i]) -> Retorna el valor del canal rojo del píxel i
+					li.problem_tip Green(imagen.pixels[i]) -> Retorna el valor del canal verde del píxel i
+					li.problem_tip Blue(imagen.pixels[i]) -> Retorna el valor del canal azul del píxel i
+					
 				ul.problem_topics
 					li.problem_topic Creatividad
 					li.problem_topic Operadores aritméticos y lógicos
@@ -33,17 +44,7 @@ block maincontent
 					li.problem_topic Sentencias repetitivas
 				section.problem_section
 					section.problem_column
-						p.problem_objective En este taller, dada una imagen, el estudiante se encargará de construir un programa en Processing que se encargará de identificar aquella transformación a escala de grises que garantice minimizar la distancia euclidiana total, esto es, la suma de las distancias euclidianas entre cada uno de los píxeles y el color que recibió en la conversión. Para ello se contará con tres colores pertenecientes a la escala de grises: negro (0,0,0); gris (123,123,123) y blanco (255,255,255).
-						ul.problem_tips
-							li.problem_tip Los píxeles se conforman por tres tipos de colores: rojo, verde y azul, cada uno con intensidades que van desde 0 hasta 255
-							li.problem_tip Image -> Tipo de dato que representa una imagen en el programa
-							li.problem_tip loadImage(nombre_imagen) -> Función que sirve para cargar una imagen en Processing
-							li.problem_tip loadPixels() -> Se encarga de cargar los píxeles de la imagen
-							li.problem_tip Los píxeles en Processing se manejan como un vector
-							li.problem_tip Red(imagen.pixels[i]) -> Retorna el valor del canal rojo del píxel i
-							li.problem_tip Green(imagen.pixels[i]) -> Retorna el valor del canal verde del píxel i
-							li.problem_tip Blue(imagen.pixels[i]) -> Retorna el valor del canal azul del píxel i
-
+						p.problem_objective Fomentar en el estudiante el uso de sentencias condicionales y repetitivas para dar solución a un problema sencillo que involucra el tratamiento de imágenes
 						a(href="resources/docs/Escala de grises.pdf" target="_blank")
 							span.icon.icon-download
 							|  Descargar enunciado completo
@@ -59,6 +60,10 @@ block maincontent
 				p.problem_description Una de las simulaciones más conocidas en el ámbito de la computación gráfica es la de cúmulo de partículas, en la cual se puede replicar el comportamiento de enjambres y rebaños que se presentan en la naturaleza.
 				img(src="resources/images/extra/particles.jpg")
 				p.problem_description El comportamiento de un enjambre está descrito por la interacción entre cada uno de los elementos que lo conforma con aquellas partículas que se encuentran dentro de su campo visual. En esta oportunidad, se va a hacer hincapié en los pares de partículas que se encuentren más cerca una de la otra.
+				p.problem_description Teniendo un enjambre de tamaño N integrado por 3 tipos de partículas, se quiere identificar la distancia mínima en tiempo real entre un par de partículas de cada tipo. Un ejemplo del entorno gráfico y la respuesta que se debe dar se enuncia a continuación:
+				img(src="resources/images/extra/example_particles.png")
+				ul.problem_tips
+					li.problem_tip Color(R, G, B) = permite crear una instancia del color con valores R, G, B en los canales rojo, verde y azul respectivamente.
 				ul.problem_topics
 					li.problem_topic Creatividad
 					li.problem_topic Operadores aritméticos y lógicos
@@ -66,10 +71,7 @@ block maincontent
 					li.problem_topic Sentencias repetitivas
 				section.problem_section
 					section.problem_column
-						p.problem_objective Teniendo un enjambre de tamaño N integrado por 3 tipos de partículas, se quiere identificar la distancia mínima en tiempo real entre un par de partículas de cada tipo. Un ejemplo del entorno gráfico y la respuesta que se debe dar se enuncia a continuación:
-						img(src="resources/images/extra/example_particles.png")
-						ul.problem_tips
-							li.problem_tip Color(R, G, B) = permite crear una instancia del color con valores R, G, B en los canales rojo, verde y azul respectivamente.
+						p.problem_objective Fomentar en el estudiante el uso de sentencias condicionales y repetitivas para dar solución a un problema sobre cúmulo de partículas
 						a(href="resources/docs/Cumulo de particulas.pdf" target="_blank")
 							span.icon.icon-download
 							|  Descargar enunciado completo

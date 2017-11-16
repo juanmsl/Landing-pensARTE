@@ -25,26 +25,26 @@ block maincontent
 			section.problem_body
 				p.problem_description El clásico juego del buscaminas en el que el usuario debe encontrar todas las minas del tablero, sin fallar en alguna y en el menor tiempo posible. Este juego consta de un tablero en el que hay números los cuales le van ayudando al usuario informándole cuantas minas hay alrededor de dicha celda, tal como se aprecia en la siguiente imagen:
 				img(src="resources/images/extra/buscaminas.png")
+				p.problem_description Se quiere a partir de un tablero en el que solo tenemos las minas en distintas posiciones, generar el tablero correspondiente que informa cuantas minas hay alrededor de cada celda.
+				ul.problem_tips
+					li.problem_tip Cada celda ubicada en una esquina tiene 3 vecinas
+					li.problem_tip Cada celda ubicada en un borde tiene 5 vecinas
+					li.problem_tip Cada celda ubicada en el interior del tablero tiene 8 vecinas
+					li.problem_tip El número correspondiente a cada celda es el total de minas que hay en sus celdas vecinas
+					li.problem_tip 
+						| Si a una posición arbitraria se tiene en cuenta una forma particular de acceder a sus vecinas, contar puede que sea más fácil.
+						br
+						img(src="resources/images/extra/vecinos.png")
 				ul.problem_topics
-					li.problem_topic Pensamiento analítico
-					li.problem_topic Operadores aritméticos y lógicos
-					li.problem_topic Sentencias condicionales
-					li.problem_topic Sentencias Repetitivas
 					li.problem_topic Recorrido de matrices
+					li.problem_topic Conteo de vecinos
+					li.problem_topic Condiciones de entorno
+					li.problem_topic Pensamiento analítico
+					li.problem_topic Abstracción de condiciones
+
 				section.problem_section
 					section.problem_column
-						p.problem_objective Se quiere a partir de un tablero en el que solo tenemos las minas en distintas posiciones, generar el tablero correspondiente que informa cuantas minas hay alrededor de cada celda.
-						ul.problem_tips
-							li.problem_tip Cada celda ubicada en una esquina tiene 3 vecinas
-							li.problem_tip Cada celda ubicada en un borde tiene 5 vecinas
-							li.problem_tip Cada celda ubicada en el interior del tablero tiene 8 vecinas
-							li.problem_tip El número correspondiente a cada celda es el total de minas que hay en sus celdas vecinas
-							li.problem_tip 
-								| Si a una posición arbitraria se tiene en cuenta una forma particular de acceder a sus vecinas, contar puede que sea más fácil.
-								br
-								img(src="resources/images/extra/vecinos.png")
-
-						
+						p.problem_objective Fomentar en el estudiante el uso de sentencias condicionales y repetitivas para dar solución a un problema sencillo que involucra recorridos de matrices y conteos.
 						a(href="resources/piezas/Buscaminas ejercicio.zip")
 							span.icon.icon-download
 							|  Descargar ejercicio

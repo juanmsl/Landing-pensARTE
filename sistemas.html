@@ -35,24 +35,25 @@
 					</section>
 					<section class="problem_body">
 						<p class="problem_description">El clásico juego del buscaminas en el que el usuario debe encontrar todas las minas del tablero, sin fallar en alguna y en el menor tiempo posible. Este juego consta de un tablero en el que hay números los cuales le van ayudando al usuario informándole cuantas minas hay alrededor de dicha celda, tal como se aprecia en la siguiente imagen:</p><img src="resources/images/extra/buscaminas.png">
+						<p class="problem_description">Se quiere a partir de un tablero en el que solo tenemos las minas en distintas posiciones, generar el tablero correspondiente que informa cuantas minas hay alrededor de cada celda.</p>
+						<ul class="problem_tips">
+							<li class="problem_tip">Cada celda ubicada en una esquina tiene 3 vecinas</li>
+							<li class="problem_tip">Cada celda ubicada en un borde tiene 5 vecinas</li>
+							<li class="problem_tip">Cada celda ubicada en el interior del tablero tiene 8 vecinas</li>
+							<li class="problem_tip">El número correspondiente a cada celda es el total de minas que hay en sus celdas vecinas</li>
+							<li class="problem_tip">
+								 Si a una posición arbitraria se tiene en cuenta una forma particular de acceder a sus vecinas, contar puede que sea más fácil.<br><img src="resources/images/extra/vecinos.png"></li>
+						</ul>
 						<ul class="problem_topics">
-							<li class="problem_topic">Pensamiento analítico</li>
-							<li class="problem_topic">Operadores aritméticos y lógicos</li>
-							<li class="problem_topic">Sentencias condicionales</li>
-							<li class="problem_topic">Sentencias Repetitivas</li>
 							<li class="problem_topic">Recorrido de matrices</li>
+							<li class="problem_topic">Conteo de vecinos</li>
+							<li class="problem_topic">Condiciones de entorno</li>
+							<li class="problem_topic">Pensamiento analítico</li>
+							<li class="problem_topic">Abstracción de condiciones</li>
 						</ul>
 						<section class="problem_section">
 							<section class="problem_column">
-								<p class="problem_objective">Se quiere a partir de un tablero en el que solo tenemos las minas en distintas posiciones, generar el tablero correspondiente que informa cuantas minas hay alrededor de cada celda.</p>
-								<ul class="problem_tips">
-									<li class="problem_tip">Cada celda ubicada en una esquina tiene 3 vecinas</li>
-									<li class="problem_tip">Cada celda ubicada en un borde tiene 5 vecinas</li>
-									<li class="problem_tip">Cada celda ubicada en el interior del tablero tiene 8 vecinas</li>
-									<li class="problem_tip">El número correspondiente a cada celda es el total de minas que hay en sus celdas vecinas</li>
-									<li class="problem_tip">
-										 Si a una posición arbitraria se tiene en cuenta una forma particular de acceder a sus vecinas, contar puede que sea más fácil.<br><img src="resources/images/extra/vecinos.png"></li>
-								</ul><a href="resources/piezas/Buscaminas ejercicio.zip"><span class="icon icon-download"></span> Descargar ejercicio</a><a href="resources/docs/Buscaminas enunciado.pdf" target="_blank"><span class="icon icon-download"></span> Descargar enunciado completo</a>
+								<p class="problem_objective">Fomentar en el estudiante el uso de sentencias condicionales y repetitivas para dar solución a un problema sencillo que involucra recorridos de matrices y conteos.</p><a href="resources/piezas/Buscaminas ejercicio.zip"><span class="icon icon-download"></span> Descargar ejercicio</a><a href="resources/docs/Buscaminas enunciado.pdf" target="_blank"><span class="icon icon-download"></span> Descargar enunciado completo</a>
 							</section>
 							<section class="problem_column">
 								<p class="problem_solution">Como solución a este problema, lo primero es abstraer los pasos que se deberían hacer para resolver el problema, entre estos están:</p>
