@@ -1,94 +1,31 @@
-.problems {
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-gap: $gutter;
+.activity {
+	user-select: none;
 
-	.problem_header {
-		user-select: none;
-		cursor: pointer;
+	.activity-header {
 		background: image("cover.jpg") center center / cover fixed no-repeat;
+		padding: $gutter;
+		padding-top: $gutter * 10;
 	}
 
-	.problem_title {
+	.activity-title {
 		margin: 0;
-		padding: $gutter * 2;
 		transition: all 0.3s ease;
-
-		&:hover {
-			padding-left: $gutter * 3;
-		}
+		text-align: left;
 	}
 
-	.problem_body {
-		//display: none;
-		text-align: justify;
-		display: flex;
-		flex-direction: column;
-
-		img {
-			align-self: center;
-			max-width: 100%;
-			margin: $gutter 0;
-		}
-
-		a {
-			text-decoration: underline dotted $gray-9;
-		}
-	}
-
-	.problem_description {
-		&:first-child::before {
-			content: 'Enunciado';
-			display: block;
-			font-size: $h4;
-			font-weight: bold;
-			margin: $gutter * 3 0;
-		}
-	}
-
-	.problem_section {
-		display: grid;
-		grid-template-columns: repeat(1, 1fr);
-
-		@include from(laptop) {
-			grid-template-columns: repeat(2, 1fr);
-			grid-gap: $gutter * 4;
-		}
-	}
-
-	.problem_objective {
-		&:first-child::before {
-			content: 'Objetivo';
-			display: block;
-			font-size: $h4;
-			font-weight: bold;
-			margin: $gutter * 3 0;
-		}
-	}
-
-	.problem_solution {
-		&:first-child::before {
-			content: 'Solución';
-			display: block;
-			font-size: $h4;
-			font-weight: bold;
-			margin: $gutter * 3 0;
-		}
-	}
-
-	.problem_topics {
+	.activity_topics {
 		list-style: none;
 		padding: 0;
 		display: flex;
-		justify-content: center;
 		flex-wrap: wrap;
-		margin: $gutter * 2 0;
+		margin: 0;
+		margin-top: $gutter;
 	}
 
-	.problem_topic {
+	.activity_topic {
 		color: $gray-1;
-		background: $gray-A;
-		padding: $gutter / 2 $gutter;
+		border: 1px solid;
+		padding: 0 4px;
 		font-size: 0.8em;
 		margin: $gutter / 2;
 		border-radius: 50px;
@@ -99,19 +36,86 @@
 		}
 	}
 
-	.problem_column {
-		display: flex;
-		flex-direction: column;
+	.activity-content {
+		position: relative;
+	}
 
-		& > * {
+	.activity-section {
+		padding: 0 $gutter * 2;
+
+		&::before {
+			display: block;
+			border-bottom: 1px solid $gray-3;
+			font-size: $h4;
+			font-weight: bold;
 			margin: $gutter 0;
+			padding: $gutter 0;
 		}
 	}
 
-	.problem_canvas {
-		margin: $gutter 0;
-		margin-top: auto;
-		display: block;
-		align-self: center;
+	p {
+		text-align: justify;
+	}
+
+	img {
+		max-width: 100%;
+	}
+
+	.activity-link {
+		margin-right: $gutter * 2;
+	}
+
+	.activity-objective {
+		margin: $gutter $gutter * 3;
+		background: $gray-D;
+		border: 1px solid $gray-C;
+	}
+
+	.activity-objective::before {
+		content: 'Objetivo';
+		border: 0;
+	}
+	.activity-description::before {
+		content: 'Enunciado';
+	}
+	.activity-tips::before {
+		content: 'Ayuda';
+	}
+	.activity-solution::before {
+		content: 'Solución';
+	}
+
+	.activity-resources {
+		color: $gray-D;
+		background: $gray-3;
+		list-style: none;
+		padding: $gutter $gutter * 2;
+
+		&::before {
+			content: 'Recursos';
+			display: block;
+			font-size: $h4;
+			font-weight: bold;
+			padding: $gutter 0;
+		}
+	}
+
+	.activity-resource {
+		padding-left: $gutter;
+	}
+
+	@include from(laptop) {
+		.activity-content {
+			padding-right: 350px + $gutter;
+		}
+
+		.activity-resources {
+			position: absolute;
+			top: 0;
+			right: $gutter;
+			width: 350px;
+			margin: 0;
+			padding: $gutter * 3 $gutter * 2;
+		}
 	}
 }

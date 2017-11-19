@@ -76,14 +76,10 @@
 	}
 }
 
-.gallery {
-	background: linear-gradient(rgba($blue-2, 0.5), rgba($blue-5, 0.7), rgba($blue-2, 0.5));
-
-	.idea {
-		margin: $gutter * 4;
-		.idea_description {
-			text-align: center;
-		}
+.idea {
+	margin: $gutter * 4;
+	.idea_description {
+		text-align: center;
 	}
 }
 

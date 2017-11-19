@@ -19,81 +19,69 @@ block header
 
 block maincontent
 	section.problems.scroll_section
-		section.problem
-			section.problem_header
-				h1.problem_title Buscaminas
-			section.problem_body
-				p.problem_description El clásico juego del buscaminas en el que el usuario debe encontrar todas las minas del tablero, sin fallar en alguna y en el menor tiempo posible. Este juego consta de un tablero en el que hay números los cuales le van ayudando al usuario informándole cuantas minas hay alrededor de dicha celda, tal como se aprecia en la siguiente imagen:
-				img(src="resources/images/extra/buscaminas.png")
-				p.problem_description Se quiere a partir de un tablero en el que solo tenemos las minas en distintas posiciones, generar el tablero correspondiente que informa cuantas minas hay alrededor de cada celda.
-				ul.problem_tips
-					li.problem_tip Cada celda ubicada en una esquina tiene 3 vecinas
-					li.problem_tip Cada celda ubicada en un borde tiene 5 vecinas
-					li.problem_tip Cada celda ubicada en el interior del tablero tiene 8 vecinas
-					li.problem_tip El número correspondiente a cada celda es el total de minas que hay en sus celdas vecinas
-					li.problem_tip 
-						| Si a una posición arbitraria se tiene en cuenta una forma particular de acceder a sus vecinas, contar puede que sea más fácil.
-						br
-						img(src="resources/images/extra/vecinos.png")
-				ul.problem_topics
-					li.problem_topic Recorrido de matrices
-					li.problem_topic Conteo de vecinos
-					li.problem_topic Condiciones de entorno
-					li.problem_topic Pensamiento analítico
-					li.problem_topic Abstracción de condiciones
-
-				section.problem_section
-					section.problem_column
-						p.problem_objective Fomentar en el estudiante el uso de sentencias condicionales y repetitivas para dar solución a un problema sencillo que involucra recorridos de matrices y conteos.
-						a(href="resources/piezas/Buscaminas ejercicio.zip")
-							span.icon.icon-download
-							|  Descargar ejercicio
-						a(href="resources/docs/Buscaminas enunciado.pdf" target="_blank")
-							span.icon.icon-download
-							|  Descargar enunciado completo
-					section.problem_column
-						p.problem_solution Como solución a este problema, lo primero es abstraer los pasos que se deberían hacer para resolver el problema, entre estos están:
-						ol
-							li Recorrer la matriz inicial dada
-							li Para cada posición de la matriz contar entre sus vecinos cuántos de ellos tienen mina
-							li Asignar el conteo
-						p.problem_solution Una vez identificado esto, se procede a desarrollar cada paso, sobre todo el paso número 2, ya que este se puede hacer de varias maneras, ya sea una condicional para posición de los vecinos y preguntando si ese vecino existe en caso de que sea un borde o una esquina.
-						a(href="resources/piezas/Buscaminas solucion.zip")
-							span.icon.icon-download
-							|  Descargar solución
-		section.problem
-			section.problem_header
-				h1.problem_title Particulas en el espacio
-			section.problem_body
-				p.problem_description El vecindario de un elemento se podría definir como los elementos que están a una distancia ‘d’ de este, para un conjunto de puntos aleatorios en el espacio, una forma de representar el vecindario de cada punto, seria trazar una línea entre los puntos que se consideran en el mismo vecindario.
-				img(src="resources/images/extra/vecindario.png")
-				p.problem_description Para este ejercicio se tendrán un conjunto de puntos en el espacio que cada uno se estará desplazando con una velocidad aleatoria en una dirección aleatoria. La idea es representar el vecindario de cada punto mientras se mueven, al moverse lo único que cambia es que el vecindario es variable, pero la definición es la misma.
-				ul.problem_tips
-					li.problem_tip Para cada elemento se debería verificar cuales de todos los demás puntos pertenecen al vecindario
-					li.problem_tip La verificación debería hacerse en cada vez que se actualice la vista.
-
-				ul.problem_topics
-					li.problem_topic Puntos en el espacio
-					li.problem_topic Vectores de velocidad
-					li.problem_topic Vecindario de un elemento
-					li.problem_topic Grafos
-					li.problem_topic Abstracción del problema
-					li.problem_topic Ciclos anidados
-
-				section.problem_section
-					section.problem_column
-						p.problem_objective Fomentar en el estudiante el uso de estructuras de datos, y condicionales para crear un entorno en base a casos o eventos únicos.
-						a(href="resources/piezas/Particulas ejercicio.zip")
-							span.icon.icon-download
-							|  Descargar ejercicio
-						a(href="resources/docs/Particulas enunciado.pdf" target="_blank")
-							span.icon.icon-download
-							|  Descargar enunciado completo
-					section.problem_column
-						p.problem_solution Como solución a este problema, lo primero es abstraer los pasos que se deberían hacer para resolver el problema, entre estos están:
-						ol
-							li Recorrer lo puntos, y para cada punto recorrerlos nuevamente para comparar cada posible pareja.
-							li Si la pareja están en un mismo vecindario pintar una recta que los una, de lo contrario no.
-						a(href="resources/piezas/Particulas solucion.zip")
-							span.icon.icon-download
-							|  Descargar solución
+		section.activity
+			section.activity-header
+				h1.activity-title Generar mapa para buscaminas
+				ul.activity_topics
+					li.activity_topic Recorrido de matrices
+					li.activity_topic Conteo de vecinos
+					li.activity_topic Condiciones de entorno
+					li.activity_topic Pensamiento analítico
+					li.activity_topic Abstracción de condiciones
+			section.activity-content
+				section.activity-section.activity-objective
+					p Fomentar en el estudiante el uso de sentencias condicionales y repetitivas para dar solución a un problema sencillo que involucra recorridos de matrices y conteos.
+				section.activity-section.activity-description
+					p El clásico juego del buscaminas en el que el usuario debe encontrar todas las minas del tablero, sin fallar en alguna y en el menor tiempo posible. Este juego consta de un tablero en el que hay números los cuales le van ayudando al usuario informándole cuantas minas hay alrededor de dicha celda, tal como se aprecia en la siguiente imagen:
+					img(src="resources/images/extra/buscaminas.png")
+					p Se quiere a partir de un tablero en el que solo tenemos las minas en distintas posiciones, generar el tablero correspondiente que informa cuantas minas hay alrededor de cada celda.
+				section.activity-section.activity-tips
+					ul
+						li Cada celda ubicada en una esquina tiene 3 vecinas
+						li Cada celda ubicada en un borde tiene 5 vecinas
+						li Cada celda ubicada en el interior del tablero tiene 8 vecinas
+						li El número correspondiente a cada celda es el total de minas que hay en sus celdas vecinas
+						li Si a una posición arbitraria se tiene en cuenta una forma particular de acceder a sus vecinas, contar puede que sea más fácil.
+							br
+							img(src="resources/images/extra/vecinos.png")
+				section.activity-section.activity-solution
+					p Como solución a este problema, lo primero es abstraer los pasos que se deberían hacer para resolver el problema, entre estos están:
+					ol
+						li Recorrer la matriz inicial dada
+						li Para cada posición de la matriz contar entre sus vecinos cuántos de ellos tienen mina
+						li Asignar el conteo
+					p Una vez identificado esto, se procede a desarrollar cada paso, sobre todo el paso número 2, ya que este se puede hacer de varias maneras, ya sea una condicional para posición de los vecinos y preguntando si ese vecino existe en caso de que sea un borde o una esquina.
+				ul.activity-resources
+					li.activity-resource.icon.icon-download.icon-space: a(href="resources/piezas/Buscaminas ejercicio.zip") Ejercicio para desarrollar
+					li.activity-resource.icon.icon-download.icon-space: a(href="resources/piezas/Buscaminas solucion.zip") Solución desarrollada
+					li.activity-resource.icon.icon-download.icon-space: a(href="resources/docs/Buscaminas enunciado.pdf" target="_blank") Enunciado del problema
+		section.activity
+			section.activity-header
+				h1.activity-title Particulas en el espacio
+				ul.activity_topics
+					li.activity_topic Puntos en el espacio
+					li.activity_topic Vectores de velocidad
+					li.activity_topic Vecindario de un elemento
+					li.activity_topic Grafos
+					li.activity_topic Abstracción del problema
+					li.activity_topic Ciclos anidados
+			section.activity-content
+				section.activity-section.activity-objective
+					p Fomentar en el estudiante el uso de estructuras de datos, y condicionales para crear un entorno en base a casos o eventos únicos.
+				section.activity-section.activity-description
+					p El vecindario de un elemento se podría definir como los elementos que están a una distancia ‘d’ de este, para un conjunto de puntos aleatorios en el espacio, una forma de representar el vecindario de cada punto, seria trazar una línea entre los puntos que se consideran en el mismo vecindario.
+					img(src="resources/images/extra/vecindario.png")
+					p Para este ejercicio se tendrán un conjunto de puntos en el espacio que cada uno se estará desplazando con una velocidad aleatoria en una dirección aleatoria. La idea es representar el vecindario de cada punto mientras se mueven, al moverse lo único que cambia es que el vecindario es variable, pero la definición es la misma.
+				section.activity-section.activity-tips
+					ul
+						li Para cada elemento se debería verificar cuales de todos los demás puntos pertenecen al vecindario
+						li La verificación debería hacerse en cada vez que se actualice la vista.
+				section.activity-section.activity-solution
+					p Como solución a este problema, lo primero es abstraer los pasos que se deberían hacer para resolver el problema, entre estos están:
+					ol
+						li Recorrer lo puntos, y para cada punto recorrerlos nuevamente para comparar cada posible pareja.
+						li Si la pareja están en un mismo vecindario pintar una recta que los una, de lo contrario no.
+				ul.activity-resources
+					li.activity-resource.icon.icon-download.icon-space: a(href="resources/piezas/Particulas ejercicio.zip") Ejercicio para desarrollar
+					li.activity-resource.icon.icon-download.icon-space: a(href="resources/piezas/Particulas solucion.zip") Solución desarrollada
+					li.activity-resource.icon.icon-download.icon-space: a(href="resources/docs/Particulas enunciado.pdf" target="_blank") Enunciado del problema

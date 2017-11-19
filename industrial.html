@@ -3,8 +3,7 @@
 	<head>
 		<title>PensARTE</title>
 		<meta charset="utf-8">
-		<meta X-Frame-Options="deny">
-		<link rel="icon" type="image/png" href="resources/images/icon.png">
+		<link rel="icon" type="image/png" href="resources/images/titleLogo.png">
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
 		<link rel="stylesheet" href="css/styles.css">
 		<link rel="stylesheet" href="css/owl.carousel.min.css">
@@ -29,65 +28,79 @@
 		</nav>
 		<div class="maincontent">
 			<section class="problems scroll_section">
-				<section class="problem">
-					<section class="problem_header">
-						<h1 class="problem_title">Escala de grises</h1>
+				<section class="activity">
+					<section class="activity-header">
+						<h1 class="activity-title">Escala de grises</h1>
+						<ul class="activity_topics">
+							<li class="activity_topic">Creatividad</li>
+							<li class="activity_topic">Operadores aritméticos y lógicos</li>
+							<li class="activity_topic">Sentencias condicionales</li>
+							<li class="activity_topic">Sentencias repetitivas</li>
+						</ul>
 					</section>
-					<section class="problem_body">
-						<p class="problem_description">El procesamiento de imágenes digitales es una herramienta de gran utilidad para la identificación y eliminación de datos irrelevantes, facilitando la detección de píxeles que poseen información de interés. Por otra parte, el tratamiento de imágenes involucra la aplicación de diversas técnicas dentro de las cuales se encuentran el uso de filtros, cuyo objetivo es el de alterar el color de cada uno de los píxeles que conforman la imagen. Uno de los filtros más reconocidos es la escala de grises, el cual se evidencia en el siguiente ejemplo</p><img src="resources/images/extra/escala_aves.png">
-						<p class="problem_description">Una de las metodologías para aplicar el filtro en cuestión es tomar la imagen píxel por píxel e identificar aquel color perteneciente a la escala de grises que se encuentre más cerca al color del píxel analizado. Un buen indicador de la cercanía o similitud de dos colores es el cálculo de la distancia euclidiana entre los dos, tal y como se ve en la siguiente ecuación:</p><img src="http://latex.codecogs.com/svg.latex?d_{(p1, p2)}=\sqrt{(x_{2}-x_{1})^{2}+(y_{2}-y_{1})^{2}+(z_{2}-z_{1})^{2}}">
-						<p class="problem_description">En este taller, dada una imagen, el estudiante se encargará de construir un programa en Processing que se encargará de identificar aquella transformación a escala de grises que garantice minimizar la distancia euclidiana total, esto es, la suma de las distancias euclidianas entre cada uno de los píxeles y el color que recibió en la conversión. Para ello se contará con tres colores pertenecientes a la escala de grises: negro (0,0,0); gris (123,123,123) y blanco (255,255,255).</p>
-						<ul class="problem_tips">
-							<li class="problem_tip">Los píxeles se conforman por tres tipos de colores: rojo, verde y azul, cada uno con intensidades que van desde 0 hasta 255</li>
-							<li class="problem_tip">Image -> Tipo de dato que representa una imagen en el programa</li>
-							<li class="problem_tip">loadImage(nombre_imagen) -> Función que sirve para cargar una imagen en Processing</li>
-							<li class="problem_tip">loadPixels() -> Se encarga de cargar los píxeles de la imagen</li>
-							<li class="problem_tip">Los píxeles en Processing se manejan como un vector</li>
-							<li class="problem_tip">Red(imagen.pixels[i]) -> Retorna el valor del canal rojo del píxel i</li>
-							<li class="problem_tip">Green(imagen.pixels[i]) -> Retorna el valor del canal verde del píxel i</li>
-							<li class="problem_tip">Blue(imagen.pixels[i]) -> Retorna el valor del canal azul del píxel i</li>
-						</ul>
-						<ul class="problem_topics">
-							<li class="problem_topic">Creatividad</li>
-							<li class="problem_topic">Operadores aritméticos y lógicos</li>
-							<li class="problem_topic">Sentencias condicionales</li>
-							<li class="problem_topic">Sentencias repetitivas</li>
-						</ul>
-						<section class="problem_section">
-							<section class="problem_column">
-								<p class="problem_objective">Fomentar en el estudiante el uso de sentencias condicionales y repetitivas para dar solución a un problema sencillo que involucra el tratamiento de imágenes</p><a href="resources/piezas/Escala de grises ejercicio.zip"><span class="icon icon-download"></span> Descargar ejercicio</a><a href="resources/docs/Escala de grises.pdf" target="_blank"><span class="icon icon-download"></span> Descargar enunciado completo</a>
-							</section>
-							<section class="problem_column">
-								<p class="problem_solution">El estudiante debe plantear la imagen a procesar como una matriz de pixeles en la que cada posición contiene el color en los tres canales (R, G, B). Posteriormente debe calcular la distancia euclidiana entre el pixel en cuestión y cada uno de los colores en la escala de grises por los cuales se puede sustituir (Blanco, gris y negro). Aquel color que se encuentre más cerca del pixel en cuestión será el que se asignará a este. Este proceso se lleva a cabo hasta cubrir todos los píxeles de la imagen.</p><a href="resources/piezas/Escala de grises solucion.zip"><span class="icon icon-download"></span> Descargar solución</a>
-							</section>
+					<section class="activity-content">
+						<section class="activity-section activity-objective">
+							<p>Fomentar en el estudiante el uso de sentencias condicionales y repetitivas para dar solución a un problema sencillo que involucra el tratamiento de imágenes</p>
 						</section>
+						<section class="activity-section activity-description">
+							<p>El procesamiento de imágenes digitales es una herramienta de gran utilidad para la identificación y eliminación de datos irrelevantes, facilitando la detección de píxeles que poseen información de interés. Por otra parte, el tratamiento de imágenes involucra la aplicación de diversas técnicas dentro de las cuales se encuentran el uso de filtros, cuyo objetivo es el de alterar el color de cada uno de los píxeles que conforman la imagen. Uno de los filtros más reconocidos es la escala de grises, el cual se evidencia en el siguiente ejemplo</p><img src="resources/images/extra/escala_aves.png">
+							<p>Una de las metodologías para aplicar el filtro en cuestión es tomar la imagen píxel por píxel e identificar aquel color perteneciente a la escala de grises que se encuentre más cerca al color del píxel analizado. Un buen indicador de la cercanía o similitud de dos colores es el cálculo de la distancia euclidiana entre los dos, tal y como se ve en la siguiente ecuación:</p><img src="http://latex.codecogs.com/svg.latex?d_{(p1, p2)}=\sqrt{(x_{2}-x_{1})^{2}+(y_{2}-y_{1})^{2}+(z_{2}-z_{1})^{2}}">
+							<p>En este taller, dada una imagen, el estudiante se encargará de construir un programa en Processing que se encargará de identificar aquella transformación a escala de grises que garantice minimizar la distancia euclidiana total, esto es, la suma de las distancias euclidianas entre cada uno de los píxeles y el color que recibió en la conversión. Para ello se contará con tres colores pertenecientes a la escala de grises: negro (0,0,0); gris (123,123,123) y blanco (255,255,255).</p>
+						</section>
+						<section class="activity-section activity-tips">
+							<ul>
+								<li>Los píxeles se conforman por tres tipos de colores: rojo, verde y azul, cada uno con intensidades que van desde 0 hasta 255</li>
+								<li>Image -> Tipo de dato que representa una imagen en el programa</li>
+								<li>loadImage(nombre_imagen) -> Función que sirve para cargar una imagen en Processing</li>
+								<li>loadPixels() -> Se encarga de cargar los píxeles de la imagen</li>
+								<li>Los píxeles en Processing se manejan como un vector</li>
+								<li>Red(imagen.pixels[i]) -> Retorna el valor del canal rojo del píxel i</li>
+								<li>Green(imagen.pixels[i]) -> Retorna el valor del canal verde del píxel i</li>
+								<li>Blue(imagen.pixels[i]) -> Retorna el valor del canal azul del píxel i</li>
+							</ul>
+						</section>
+						<section class="activity-section activity-solution">
+							<p>El estudiante debe plantear la imagen a procesar como una matriz de pixeles en la que cada posición contiene el color en los tres canales (R, G, B). Posteriormente debe calcular la distancia euclidiana entre el pixel en cuestión y cada uno de los colores en la escala de grises por los cuales se puede sustituir (Blanco, gris y negro). Aquel color que se encuentre más cerca del pixel en cuestión será el que se asignará a este. Este proceso se lleva a cabo hasta cubrir todos los píxeles de la imagen.</p>
+						</section>
+						<ul class="activity-resources">
+							<li class="activity-resource icon icon-download icon-space"><a href="resources/piezas/Escala de grises ejercicio.zip">Ejercicio para desarrollar</a></li>
+							<li class="activity-resource icon icon-download icon-space"><a href="resources/piezas/Escala de grises solucion.zip">Solución desarrollada</a></li>
+							<li class="activity-resource icon icon-download icon-space"><a href="resources/docs/Escala de grises.pdf" target="_blank">Enunciado del problema</a></li>
+						</ul>
 					</section>
 				</section>
-				<section class="problem">
-					<section class="problem_header">
-						<h1 class="problem_title">Cúmulo de particulas</h1>
+				<section class="activity">
+					<section class="activity-header">
+						<h1 class="activity-title">Cúmulo de particulas</h1>
+						<ul class="activity_topics">
+							<li class="activity_topic">Creatividad</li>
+							<li class="activity_topic">Operadores aritméticos y lógicos</li>
+							<li class="activity_topic">Sentencias condicionales</li>
+							<li class="activity_topic">Sentencias repetitivas</li>
+						</ul>
 					</section>
-					<section class="problem_body">
-						<p class="problem_description">Una de las simulaciones más conocidas en el ámbito de la computación gráfica es la de cúmulo de partículas, en la cual se puede replicar el comportamiento de enjambres y rebaños que se presentan en la naturaleza.</p><img src="resources/images/extra/particles.jpg">
-						<p class="problem_description">El comportamiento de un enjambre está descrito por la interacción entre cada uno de los elementos que lo conforma con aquellas partículas que se encuentran dentro de su campo visual. En esta oportunidad, se va a hacer hincapié en los pares de partículas que se encuentren más cerca una de la otra.</p>
-						<p class="problem_description">Teniendo un enjambre de tamaño N integrado por 3 tipos de partículas, se quiere identificar la distancia mínima en tiempo real entre un par de partículas de cada tipo. Un ejemplo del entorno gráfico y la respuesta que se debe dar se enuncia a continuación:</p><img src="resources/images/extra/example_particles.png">
-						<ul class="problem_tips">
-							<li class="problem_tip">Color(R, G, B) = permite crear una instancia del color con valores R, G, B en los canales rojo, verde y azul respectivamente.</li>
-						</ul>
-						<ul class="problem_topics">
-							<li class="problem_topic">Creatividad</li>
-							<li class="problem_topic">Operadores aritméticos y lógicos</li>
-							<li class="problem_topic">Sentencias condicionales</li>
-							<li class="problem_topic">Sentencias repetitivas</li>
-						</ul>
-						<section class="problem_section">
-							<section class="problem_column">
-								<p class="problem_objective">Fomentar en el estudiante el uso de sentencias condicionales y repetitivas para dar solución a un problema sobre cúmulo de partículas</p><a href="resources/piezas/Cumulo de particulas ejercicio.zip"><span class="icon icon-download"></span> Descargar ejercicio</a><a href="resources/docs/Cumulo de particulas.pdf" target="_blank"><span class="icon icon-download"></span> Descargar enunciado completo</a>
-							</section>
-							<section class="problem_column">
-								<p class="problem_solution">El estudiante debe saber que se cuenta con un arreglo de partículas y otro que contiene el color de cada una de ellas. El alumno debe de elaborar una comparación entre todas las partículas y calcular la distancia existente entre aquellas que tengan el mismo color, si esta es menor que la mínima distancia global para ese tipo de partículas, se actualiza dicha variable y se muestra su resultado por pantalla.</p><a href="resources/piezas/Cumulo de particulas solucion.zip"><span class="icon icon-download"></span> Descargar solución</a>
-							</section>
+					<section class="activity-content">
+						<section class="activity-section activity-objective">
+							<p>Fomentar en el estudiante el uso de sentencias condicionales y repetitivas para dar solución a un problema sobre cúmulo de partículas</p>
 						</section>
+						<section class="activity-section activity-description">
+							<p>Una de las simulaciones más conocidas en el ámbito de la computación gráfica es la de cúmulo de partículas, en la cual se puede replicar el comportamiento de enjambres y rebaños que se presentan en la naturaleza.</p><img src="resources/images/extra/particles.jpg">
+							<p>El comportamiento de un enjambre está descrito por la interacción entre cada uno de los elementos que lo conforma con aquellas partículas que se encuentran dentro de su campo visual. En esta oportunidad, se va a hacer hincapié en los pares de partículas que se encuentren más cerca una de la otra.</p>
+							<p>Teniendo un enjambre de tamaño N integrado por 3 tipos de partículas, se quiere identificar la distancia mínima en tiempo real entre un par de partículas de cada tipo. Un ejemplo del entorno gráfico y la respuesta que se debe dar se enuncia a continuación:</p><img src="resources/images/extra/example_particles.png">
+						</section>
+						<section class="activity-section activity-tips">
+							<ul>
+								<li>Color(R, G, B) = permite crear una instancia del color con valores R, G, B en los canales rojo, verde y azul respectivamente.</li>
+							</ul>
+						</section>
+						<section class="activity-section activity-solution">
+							<p>El estudiante debe saber que se cuenta con un arreglo de partículas y otro que contiene el color de cada una de ellas. El alumno debe de elaborar una comparación entre todas las partículas y calcular la distancia existente entre aquellas que tengan el mismo color, si esta es menor que la mínima distancia global para ese tipo de partículas, se actualiza dicha variable y se muestra su resultado por pantalla.</p>
+						</section>
+						<ul class="activity-resources">
+							<li class="activity-resource icon icon-download icon-space"><a href="resources/piezas/Cumulo de particulas ejercicio.zip">Ejercicio para desarrollar</a></li>
+							<li class="activity-resource icon icon-download icon-space"><a href="resources/piezas/Cumulo de particulas solucion.zip">Solución desarrollada</a></li>
+							<li class="activity-resource icon icon-download icon-space"><a href="resources/docs/Cumulo de particulas.pdf" target="_blank">Enunciado del problema</a></li>
+						</ul>
 					</section>
 				</section>
 			</section>
